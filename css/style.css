@@ -1,0 +1,22 @@
+select {
+    width: 100%;
+    padding: 7px 7px;
+    margin: 1px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+pre{
+	font-family: sans-serif;
+	/*font-weight:bold;*/
+	font-size:100%;
+	background-color:rgb(228, 255, 255);
+}
+
+.containerr{
+margin-left: 25%;
+width: 100%;
+padding: 10px 10px;
+text-align:left;
+}
