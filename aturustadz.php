@@ -69,58 +69,61 @@
 
             <!-- Jumbotron Header -->
             <header class="jumbotron hero-spacer">
-                <center><h2>Tambah Ustadz</h2></center>
-                <form class="form-horizontal" action='' method="POST">
-                    <fieldset>
-                        <div id="legend">
-                            <legend class="">Register</legend>
-                        </div>
-                        <div class="control-group">
-                            <!-- Username -->
-                            <label class="control-label"  for="username">Username</label>
-                            <div class="controls">
-                                <input type="text" id="username" name="username" placeholder="" class="input-xlarge">
-                                <p class="help-block">Username can contain any letters or numbers, without spaces</p>
-                            </div>
-                        </div>
+                <!--<center><div id="legend"><h2><legend class="">Tambah Ustadz</legend></h2></div></center>-->
+                <div class="container">
+                    <div class="row">
+                        <legend><center><h2>Tambah Ustadz</h2></center></legend>
 
-                        <div class="control-group">
-                            <!-- E-mail -->
-                            <label class="control-label" for="email">E-mail</label>
-                            <div class="controls">
-                                <input type="text" id="email" name="email" placeholder="" class="input-xlarge">
-                                <p class="help-block">Please provide your E-mail</p>
-                            </div>
-                        </div>
+                        <form class="form-horizontal" action="aturustadz_tambah.php" method="POST">
+                            <fieldset>
 
-                        <div class="control-group">
-                            <!-- Password-->
-                            <label class="control-label" for="password">Password</label>
-                            <div class="controls">
-                                <input type="password" id="password" name="password" placeholder="" class="input-xlarge">
-                                <p class="help-block">Password should be at least 4 characters</p>
-                            </div>
-                        </div>
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="textinput">Nama</label>  
+                                    <div class="col-md-4">
+                                        <input id="textinput" name="nama" class="form-control input-md" type="text">
+                                        <span class="help-block"> </span>  
+                                    </div>
+                                </div>
 
-                        <div class="control-group">
-                            <!-- Password -->
-                            <label class="control-label"  for="password_confirm">Password (Confirm)</label>
-                            <div class="controls">
-                                <input type="password" id="password_confirm" name="password_confirm" placeholder="" class="input-xlarge">
-                                <p class="help-block">Please confirm password</p>
-                            </div>
-                        </div>
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="textinput">Email</label>  
+                                    <div class="col-md-4">
+                                        <input id="textinput" name="email" class="form-control input-md" type="text">
+                                        <span class="help-block"> </span>  
+                                    </div>
+                                </div>
 
-                        <div class="control-group">
-                            <!-- Button -->
-                            <div class="controls">
-                                <button class="btn btn-success">Register</button>
-                            </div>
-                        </div>
-                    </fieldset>
-                </form>
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="textinput">Password</label>  
+                                    <div class="col-md-4">
+                                        <input id="textinput" name="password" class="form-control input-md" type="password">
+                                        <span class="help-block"> </span>  
+                                    </div>
+                                </div>
 
-                <center><a class="btn btn-primary btn-large">Tambah Ustadz</a></center>
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="textinput">No HP</label>  
+                                    <div class="col-md-4">
+                                        <input id="textinput" name="nohp" class="form-control input-md" required="" type="text">
+                                        <span class="help-block"> </span>  
+                                    </div>
+                                </div>
+                                
+                                <!-- Button -->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="singlebutton"> </label>
+                                    <div class="col-md-4">
+                                        <button type="submit" id="singlebutton" name="singlebutton" class="btn btn-primary">Tambah Ustadz</button>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
             </header>
 
             <hr>
@@ -155,7 +158,7 @@
                         echo ("<div class='tile-progress tile-cyan'>");
                         echo ("<div class='tile-header'>");
                         echo ("<div class='widget-user-image'>");
-                        echo ("<img class='img-circle' src='img/ustadz/$roww[foto]' width='20' height='20' alt='User Avatar'>");
+                        echo ("<img class='img-circle' src='img/$roww[foto]' width='20' height='20' alt='User Avatar'>");
                         echo ("</div></br></br></br>");
                         echo ("<h4>$roww[nama]</h4>");
                         echo ("<h4>$roww[email]</h4>");

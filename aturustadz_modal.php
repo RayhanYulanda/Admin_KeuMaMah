@@ -27,7 +27,7 @@
         		
                 <div class="form-group" style="padding-bottom: 20px;">
                 	<label for="foto">Ganti Foto Profil</label><br>
-     				<?php echo "<img src='img/ustadz/".$bio_ustadz->foto."' width='100px' height='100px'/>"; ?>
+     				<?php echo "<img src='img/".$bio_ustadz->foto."' width='100px' height='100px'/>"; ?>
 					<br><input type="file" name="foto" />
                 </div>
 				<?php // ini jika tidak ada dimasukkan foto

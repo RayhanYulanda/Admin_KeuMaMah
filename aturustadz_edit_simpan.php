@@ -22,7 +22,7 @@
 	else
 	$foto	= $_FILES['foto']['name'];   
    
-   move_uploaded_file($_FILES['foto']['tmp_name'], "img/ustadz/".$_FILES['foto']['name']);
+   move_uploaded_file($_FILES['foto']['tmp_name'], "img/".$_FILES['foto']['name']);
     $sql_edit = "UPDATE tentor SET password ='$password', 
 									nama = '$nama',
 									nohp = '$nohp', 

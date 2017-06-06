@@ -7,7 +7,7 @@
 //$password = "rehan5797";
 //$nama_database = "u627280070_kmm";
 
-$host = "localhost:8080";
+$host = "localhost";
 $username = "root";
 $password = "";
 $nama_database = "project_pbm";
