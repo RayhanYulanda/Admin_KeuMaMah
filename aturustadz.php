@@ -81,7 +81,7 @@
                                 <div class="form-group">
                                     <label class="col-md-4 control-label" for="textinput">Nama</label>  
                                     <div class="col-md-4">
-                                        <input id="textinput" name="nama" class="form-control input-md" type="text">
+                                        <input id="textinput" name="nama_ustadz" class="form-control input-md" type="text">
                                         <span class="help-block"> </span>  
                                     </div>
                                 </div>
@@ -90,7 +90,7 @@
                                 <div class="form-group">
                                     <label class="col-md-4 control-label" for="textinput">Email</label>  
                                     <div class="col-md-4">
-                                        <input id="textinput" name="email" class="form-control input-md" type="text">
+                                        <input id="textinput" name="email_ustadz" class="form-control input-md" type="text">
                                         <span class="help-block"> </span>  
                                     </div>
                                 </div>
@@ -99,7 +99,7 @@
                                 <div class="form-group">
                                     <label class="col-md-4 control-label" for="textinput">Password</label>  
                                     <div class="col-md-4">
-                                        <input id="textinput" name="password" class="form-control input-md" type="password">
+                                        <input id="textinput" name="password_ustadz" class="form-control input-md" type="password">
                                         <span class="help-block"> </span>  
                                     </div>
                                 </div>
@@ -108,7 +108,7 @@
                                 <div class="form-group">
                                     <label class="col-md-4 control-label" for="textinput">No HP</label>  
                                     <div class="col-md-4">
-                                        <input id="textinput" name="nohp" class="form-control input-md" required="" type="text">
+                                        <input id="textinput" name="nohp_ustadz" class="form-control input-md" required="" type="text">
                                         <span class="help-block"> </span>  
                                     </div>
                                 </div>
@@ -158,17 +158,17 @@
                         echo ("<div class='tile-progress tile-cyan'>");
                         echo ("<div class='tile-header'>");
                         echo ("<div class='widget-user-image'>");
-                        echo ("<img class='img-circle' src='img/$roww[foto]' width='20' height='20' alt='User Avatar'>");
+                        echo ("<img class='img-circle' src='img/$roww[foto_ustadz]' width='20' height='20' alt='User Avatar'>");
                         echo ("</div></br></br></br>");
-                        echo ("<h4>$roww[nama]</h4>");
-                        echo ("<h4>$roww[email]</h4>");
-                        echo ("<h5>$roww[nohp]</h5>");
+                        echo ("<h4>$roww[nama_ustadz]</h4>");
+                        echo ("<h4>$roww[email_ustadz]</h4>");
+                        echo ("<h5>$roww[nohp_ustadz]</h5>");
                         echo ("</div>");
                         echo ("<div class='tile-progressbar'>");
                         echo ("</div>");
                         echo ("<div class='tile-footer'>");
-                        echo ("<center><a href='#' class='open_modal' id='$roww[id]'><button class='btn btn-info'><span class='fa fa-user'></span> Edit Profile</a></button>");
-                        echo ("<a href='aturustadz_hapus.php?id=$roww[id]' onclick =\"return confirm('Apakah kamu yakin ingin mendelete data ini?')\"><button type='button' class='btn btn-danger'>Delete</a><span class='glyphicon glyphicon-trash'></span></button></center>");
+                        echo ("<center><a href='#' class='open_modal' id='$roww[id_ustadz]'><button class='btn btn-info'><span class='fa fa-user'></span> Edit Profile</a></button>");
+                        echo ("<a href='aturustadz_hapus.php?id=$roww[id_ustadz]' onclick =\"return confirm('Apakah kamu yakin ingin mendelete data ini?')\"><button type='button' class='btn btn-danger'>Delete</a><span class='glyphicon glyphicon-trash'></span></button></center>");
                         echo ("</div>");
                         echo ("</div>");
                         echo ("</div>");

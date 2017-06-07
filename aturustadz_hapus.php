@@ -9,7 +9,7 @@ include "koneksi.php";
 
 $id = $_GET['id'];
 
-$sql_delete = "DELETE from ustadz WHERE id='$id'";
+$sql_delete = "DELETE from ustadz WHERE id_ustadz='$id'";
 mysqli_query ($con,$sql_delete);
 
 header ("location:aturustadz.php");

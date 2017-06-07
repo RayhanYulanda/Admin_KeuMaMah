@@ -10,7 +10,7 @@ class biodata_ustadz{
 
 	public function __construct($id)
 	{
-		$host = "localhost";
+		$host = "localhost:8080";
 		$username = "root";
 		$password = "";
 		$nama_database = "project_pbm";
@@ -18,8 +18,8 @@ class biodata_ustadz{
 		//koneksi ke host
 		$con =mysqli_connect($host, $username, $password, $nama_database) or die ("Maaf server mati");
 		$this->id=$id;
-		$sql_tentor = "SELECT * FROM ustadz WHERE id='$this->id'";
-		$resultt = mysqli_query($con,$sql_tentor);
+		$sql_ustadz = "SELECT * FROM ustadz WHERE id_ustadz='$this->id'";
+		$resultt = mysqli_query($con,$sql_ustadz);
 									
 		if($resultt === FALSE) { 
 			die(mysql_error()); // error handling
@@ -27,11 +27,11 @@ class biodata_ustadz{
 		
 		$roww = mysqli_fetch_array ($resultt);
 
-			$this->nama = $roww['nama'];
-            $this->email = $roww['email'];
-            $this->password = $roww['password'];
-			$this->nohp = $roww['nohp'];
-			$this->foto = $roww['foto'];
+			$this->nama = $roww['nama_ustadz'];
+            $this->email = $roww['email_ustadz'];
+            $this->password = $roww['password_ustadz'];
+			$this->nohp = $roww['nohp_ustadz'];
+			$this->foto = $roww['foto_ustadz'];
 			
 	}
 	
