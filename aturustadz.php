@@ -208,7 +208,7 @@
                 $(".open_modal").click(function(e) {
                     var m = $(this).attr("id");
                     $.ajax({
-                        url: "aturustadz_modal.php",
+                        url: "aturustadz_modal.php?id="+m,
                         type: "GET",
                         success: function (ajaxData){
                             $("#ModalEdit").html(ajaxData);
@@ -217,6 +217,9 @@
                     });
                 });
             });
+            function tampilinModal(id){
+                $("#ModalEdit").modal("show");
+            }
         </script>    
 
     </body>

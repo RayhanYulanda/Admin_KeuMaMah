@@ -10,7 +10,7 @@ class biodata_ustadz{
 
 	public function __construct($id)
 	{
-		$host = "localhost:8080";
+		$host = "localhost";
 		$username = "root";
 		$password = "";
 		$nama_database = "project_pbm";
