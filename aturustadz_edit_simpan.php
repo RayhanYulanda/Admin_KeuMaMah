@@ -10,10 +10,10 @@
  
    
     $id = $_POST['id'];
-	$password	= $_POST['password_ustadz'];
-	$nama	= $_POST['nama_ustadz'];
-	$nohp	= $_POST['nohp_ustadz'];
-	$email = $_POST['email_ustadz'];
+	$password	= $_POST['password'];
+	$nama	= $_POST['nama'];
+	$nohp	= $_POST['nohp'];
+	$email = $_POST['email'];
 
 	//pengecekan bila foto edit profile
 	if($_FILES['foto']['name'] == ""){
@@ -31,6 +31,6 @@
 									WHERE id_ustadz = '$id'";
 									
 	mysqli_query($con,$sql_edit) or die (mysql_error());
-	header("location:aturustadz.php");
+	//header("location:aturustadz.php");
  
 ?>

@@ -18,12 +18,12 @@
                 "instansi_user" => $data_profile["instansi_user"],
                 );
 
-    $hasil["profil"][] = $ubahIndex;
+    $hasil["profil"] = $ubahIndex;
     
     
     $query = "SELECT 
                 mengajukan.id_ajuan,ustadz.nohp_ustadz,ustadz.nama_ustadz,
-                mengajukan.materi, mengajukan.jadwal, mengajukan.alamat, mengajukan.status
+                mengajukan.materi, mengajukan.jadwal, mengajukan.alamat, mengajukan.status, mengajukan.komentar
                 FROM mengajukan 
                 LEFT JOIN ustadz ON ustadz.id_ustadz=mengajukan.id_ustadz
                 WHERE mengajukan.id_user='$data_profile[id_user]'";
@@ -37,7 +37,8 @@
                 "materi" => $baris["materi"],
                 "jadwal" => $baris["jadwal"],
                 "alamat" => $baris["alamat"],
-                "status" => $baris["status"]
+                "status" => $baris["status"],
+                "komentar" => $baris["komentar"]
                 );
                 
             $hasil["pengajuan"][] = $ubahIndex;

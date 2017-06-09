@@ -37,6 +37,7 @@
 				?>
 				<div class="form-group" style="padding-bottom: 20px;">
                 	<label for="nama">Nama</label>
+                    <input type="hidden" name="id" value="$id"/>
      				<input type="text" name="nama"  class="form-control" value="<?php echo $bio_ustadz->nama; ?>"/>
                 </div>
 				

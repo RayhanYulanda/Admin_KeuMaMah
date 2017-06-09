@@ -9,7 +9,7 @@
  $jadwal = $_POST['jadwal']; 
 
  $query = "INSERT INTO mengajukan (id_user,id_ustadz,materi, alamat,jadwal, status)
-                            VALUE ('$id_user','$id_ustadz','$materi','$alamat','$jadwal','pending')";
+                            VALUE ('$id_user','$id_ustadz','$materi','$alamat','$jadwal','Pending')";
 
 
  if ($db->query($query) === TRUE) { 
