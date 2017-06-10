@@ -7,8 +7,8 @@
     $data_profile = $con->query($query_profile)->fetch_assoc();
 
     $hasil = array(
-        "profil" => [],
-        "pengajuan" => []);
+        "profilUstadz" => [],
+        "pengajuanUstadz" => []);
 
     $ubahIndex = array (
                 "nama_ustadz" => $data_profile["nama_ustadz"],
@@ -18,7 +18,7 @@
                 "id_ustadz" => $data_profile["id_ustadz"]
                 );
 
-    $hasil["profil"] = $ubahIndex;
+    $hasil["profilUstadz"] = $ubahIndex;
     
     
     $query = "SELECT mengajukan.id_ajuan, user.instansi_user, user.nohp_user, mengajukan.materi, mengajukan.waktu, 
@@ -40,7 +40,7 @@
                 "alamat" => $baris["alamat"]
                 );
                 
-            $hasil["pengajuan"][] = $ubahIndex;
+            $hasil["pengajuanUstadz"][] = $ubahIndex;
 		}
 	}
 	
