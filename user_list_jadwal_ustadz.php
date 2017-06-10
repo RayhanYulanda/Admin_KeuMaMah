@@ -3,7 +3,7 @@
 	
 	$query = "SELECT * FROM ustadz";
 	$data = $con->query($query);
-	$hasil = array("data" => []);
+	$hasil = array("ustadzlists" => []);
 	
 	if($data->num_rows > 0){
 		while($baris = $data->fetch_assoc()){
@@ -15,7 +15,7 @@
                 "foto_ustadz" => $baris["foto_ustadz"]
                 );
                 
-            $hasil["data"][] = $ubahIndex;
+            $hasil["ustadzlists"][] = $ubahIndex;
 		}
 	}
 	

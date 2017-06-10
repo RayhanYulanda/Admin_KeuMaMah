@@ -23,7 +23,7 @@
     
     $query = "SELECT 
                 mengajukan.id_ajuan,ustadz.nohp_ustadz,ustadz.nama_ustadz,
-                mengajukan.materi, mengajukan.jadwal, mengajukan.alamat, mengajukan.status, mengajukan.komentar
+                mengajukan.materi, mengajukan.waktu, mengajukan.tanggal, mengajukan.alamat, mengajukan.status, mengajukan.komentar
                 FROM mengajukan 
                 LEFT JOIN ustadz ON ustadz.id_ustadz=mengajukan.id_ustadz
                 WHERE mengajukan.id_user='$data_profile[id_user]'";
@@ -35,7 +35,8 @@
                 "nama_ustadz" => $baris["nama_ustadz"],
                 "nohp_ustadz" => $baris["nohp_ustadz"],
                 "materi" => $baris["materi"],
-                "jadwal" => $baris["jadwal"],
+                "tanggal" => $baris["tanggal"],
+                "waktu" => $baris["waktu"],
                 "alamat" => $baris["alamat"],
                 "status" => $baris["status"],
                 "komentar" => $baris["komentar"]
