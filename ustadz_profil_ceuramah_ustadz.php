@@ -17,7 +17,7 @@
 				"foto_ustadz" => $data_profile["foto_ustadz"]
                 );
 				
-			$hasil["profil"][] = $ubahIndex;
+			$hasil["profil"] = $ubahIndex;
 			
 			
 	
