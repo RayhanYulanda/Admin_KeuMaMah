@@ -26,7 +26,7 @@
                 mengajukan.materi, mengajukan.waktu, mengajukan.tanggal, mengajukan.alamat, mengajukan.status, mengajukan.komentar
                 FROM mengajukan 
                 LEFT JOIN ustadz ON ustadz.id_ustadz=mengajukan.id_ustadz
-                WHERE mengajukan.id_user='$data_profile[id_user]'";
+                WHERE mengajukan.id_user='$data_profile[id_user]' ORDER BY mengajukan.tanggal DESC";
 	$data = $con->query($query);
 	
 	if($data->num_rows > 0){

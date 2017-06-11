@@ -11,13 +11,13 @@
 $sql = "SELECT * FROM user WHERE email_user='$email_user'";	
 	$resultt = mysqli_query($con,$sql);	
     $roww = $resultt->num_rows;
-		if( $roww > 0 ){
+        if( $roww > 0 ){
             $pesan['kode'] = 0;
 			$pesan['pesan'] = "Email sudah ada"; 
 		}
 		else{
-            $query = "INSERT INTO user (email_user,password_user,nama_user,nohp_user,instansi_user,foto_user) VALUE ('$email_user','$password_user','$nama_user','$nohp_user','$instansi_user','img/default.jpeg')";
-             if ($db->query($query) === TRUE) { 
+            $query = "INSERT INTO user (email_user,password_user,nama_user,nohp_user,instansi_user,foto_user) VALUE ('$email_user','$password_user','$nama_user','$nohp_user','$instansi_user','default.jpeg')";
+             if ($con->query($query) === TRUE) { 
                  $pesan['kode'] = 1;
                  $pesan['pesan'] = "Sukses membuat akun"; 
              }else{ 
