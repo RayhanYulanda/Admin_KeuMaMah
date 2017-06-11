@@ -26,7 +26,7 @@
                 FROM mengajukan
                 LEFT JOIN user ON user.id_user = mengajukan.id_user
                 WHERE mengajukan.id_ustadz =$data_profile[id_ustadz]
-                AND mengajukan.status =  'Terima'";
+                AND mengajukan.status =  'Terima' ORDER BY mengajukan.tanggal DESC";
 	$data = $con->query($query);
 	
 	if($data->num_rows > 0){
