@@ -2,11 +2,8 @@
 	require_once './koneksi.php';
 
     $tanggal = $_POST['tanggal'];
-
-	$query = "SELECT mengajukan.id_ajuan, ustadz.foto_ustadz, ustadz.nama_ustadz, mengajukan.materi, mengajukan.waktu, 
-	mengajukan.tanggal, mengajukan.alamat, mengajukan.status, mengajukan.komentar
-	FROM mengajukan	LEFT JOIN ustadz ON ustadz.id_ustadz = mengajukan.id_ustadz
-	WHERE mengajukan.tanggal ='$tanggal' AND mengajukan.status != 'Terima'  ORDER BY mengajukan.waktu DESC";
+	
+	$query ="SELECT * FROM ustadz WHERE id_ustadz NOT IN (SELECT id_ustadz FROM mengajukan WHERE tanggal='$tanggal' AND status='Terima')";
 			
 	$data_ust = $con->query($query);
 	
@@ -17,10 +14,7 @@
 			$ubahIndex = array (
 				"nama_ustadz" => $baris["nama_ustadz"],
                 "foto_ustadz" => $baris["foto_ustadz"],
-                "materi" => $baris["materi"],
-                "tanggal" => $baris["tanggal"],
-                "waktu" => $baris["waktu"],
-                "alamat" => $baris["alamat"]
+                "nohp_ustadz" => $baris["nohp_ustadz"]
            
                 );
                 
