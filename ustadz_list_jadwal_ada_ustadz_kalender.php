@@ -10,7 +10,7 @@
 			
 	$data_ust = $con->query($query);
 	
-	$hasil = array("tanggal" => []);
+	$hasil = array("ustadzlistsada" => []);
 	
 	if($data_ust->num_rows > 0){
 		while($baris = $data_ust->fetch_assoc()){
@@ -24,7 +24,7 @@
            
                 );
                 
-            $hasil["tanggal"][] = $ubahIndex;
+            $hasil["ustadzlistsada"][] = $ubahIndex;
 		}
 	}
 	
